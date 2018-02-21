@@ -1,0 +1,24 @@
+{
+  "name": "gamepad-tester",
+  "description": "electron app for testing gamepads",
+  "version": "1.0.0",
+  "author": "Nate Goldman <ungoldman@gmail.com> (http://ungoldman.com/)",
+  "dependencies": {
+    "electron-context-menu": "^0.9.1",
+    "hyperaxe": "^1.0.1",
+    "nanochoo": "^6.8.0",
+    "style.css": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2",
+    "standard": "^11.0.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "fmt": "standard --fix",
+    "start": "electron index.js",
+    "test": "standard"
+  }
+}

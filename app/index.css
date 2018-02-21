@@ -1,0 +1,70 @@
+html {
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: menlo, inconsolata, system-ui, sans-serif;
+}
+* {
+  cursor: default;
+  user-select: none;
+}
+#app {
+  margin: 14px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.buttons, .axes {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gamepad {
+  border: 1px solid #333;
+  background: #222;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  background: #333;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==);
+  background-size: 0% 0%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.button.pressed { border: 1px solid white }
+.axis { display: flex }
+.axis .button {
+  border-radius: 5px 0 0 5px;
+}
+.axis meter {
+  display: inline-flex;
+  height: 1.5rem;
+  width: 160px;
+  height: 3rem;
+}
+.axis meter::-webkit-meter-bar {
+  background: #333;
+  border: 1px solid #999;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  overflow: hidden;
+}
+.axis meter.pressed::-webkit-meter-bar { border-color: white }
+.axis meter::-webkit-meter-optimum-value {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)
+}
+.title { font-size: 18px }
